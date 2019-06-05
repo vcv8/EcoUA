@@ -53,10 +53,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\tests\Scrpits\BasuraGen.cs" />
-     <Compile Include="Assets\tests\Scrpits\Cubo.cs" />
-     <Compile Include="Assets\tests\Scrpits\ElemBasura.cs" />
-     <Compile Include="Assets\tests\Scrpits\Tipo.cs" />
+     <Compile Include="Assets\DragMovement.cs" />
+     <Compile Include="Assets\Scripts\DragObject.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\GeneradorItems.cs" />
+     <Compile Include="Assets\Scripts\ScrollDown.cs" />
+     <Compile Include="Assets\ScriptsTest\BasuraGen.cs" />
+     <Compile Include="Assets\ScriptsTest\Cubo.cs" />
+     <Compile Include="Assets\ScriptsTest\ElemBasura.cs" />
+     <Compile Include="Assets\ScriptsTest\Tipo.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Usuario/Documents/EcoUA/EcoUA/ecoUAproject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
