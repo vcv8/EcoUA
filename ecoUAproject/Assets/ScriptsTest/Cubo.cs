@@ -1,16 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Cubo : MonoBehaviour
 {	
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log("Soy Cubo de tipo " + tag);
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.D)){
@@ -20,13 +13,25 @@ public class Cubo : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    ///COLISIONES///
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(other.gameObject.tag == tag){
-            GameController.instance.TriggeredCollision(other.gameObject, true);
-        }else
+        if(collision.transform.tag == transform.tag)
         {
-            GameController.instance.TriggeredCollision(other.gameObject, false);
+            Destroy(collision.gameObject);
+
+            GameController.instance.score++;
+        }
+        else
+        {
+            Destroy(collision.gameObject);
+
+            GameController.instance.score--;
+            if (GameController.instance.score < 0)
+            {
+                GameController.instance.score = 0;
+            }
+            Handheld.Vibrate();
         }
     }
 }

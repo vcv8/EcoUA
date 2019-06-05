@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
 
     public static GameController instance; //Para acceder desde cualquier clase a esta clase GameController, es como un Singleton
 
+    //Variables globales
     public float speed_scrollDown; //velocidad de caida de la basura
-    public Vector2 limitSpawnX; //Limite en x para la instanciacion de los objetos
+    public Vector2 limitSpawnX; //Limite en x para la instanciacion de los objetos+
 
-    public bool gameOver;
+    //Textos
+    public int score;
+    public Text scoreText;
+    public Text levelFinishText;
+
+    //Game over, finish level y tiempos del nivel
     public bool finishLevel;
     public float maxTimeLevel;
     float currentTimeLevel;
@@ -33,15 +40,19 @@ public class GameController : MonoBehaviour
     void Start()
     {
         currentTimeLevel = 0;
+        score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        scoreText.text = score.ToString();
+
         currentTimeLevel += Time.deltaTime;
         if (currentTimeLevel >= maxTimeLevel)
         {
             finishLevel = true;
+            levelFinishText.gameObject.SetActive(true);
         }
     }
 
@@ -51,11 +62,5 @@ public class GameController : MonoBehaviour
         {
             GameController.instance = null;
         }
-    }
-
-    public void TriggeredCollision(GameObject basura, bool valor)
-    {
-        Destroy(basura);
-        Debug.Log ("Acierto?" + valor);
     }
 }

@@ -13,7 +13,7 @@ public class ScrollDown : MonoBehaviour
 
     void Update()
     {
-        if (!GameController.instance.gameOver) //Si no se ha perdido o no se ha llegado al tiempo max del nivel
+        if (!GameController.instance.finishLevel) //Si no se ha perdido o no se ha llegado al tiempo max del nivel
         {
             rb2d.velocity = new Vector2(0, -GameController.instance.speed_scrollDown);
         }

@@ -1,0 +1,2 @@
+D:\Proyectos\Unity Juegos Completos\Juegos Unity\Juego UA Victor\EcoUA\EcoUA\ecoUAproject\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\Proyectos\Unity Juegos Completos\Juegos Unity\Juego UA Victor\EcoUA\EcoUA\ecoUAproject\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
