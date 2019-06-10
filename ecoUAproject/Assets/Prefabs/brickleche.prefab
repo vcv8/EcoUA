@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4059142989744877937}
   - component: {fileID: 4059142989744877950}
   - component: {fileID: 4161420668993715073}
+  - component: {fileID: 4341195934669429368}
   m_Layer: 0
   m_Name: brickleche
   m_TagString: amarillo
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4059142989744877938}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.4081258, y: 2.7313654, z: 0}
-  m_LocalScale: {x: 0.295317, y: 0.295317, z: 0.295317}
+  m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -141,3 +142,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.99, y: 4.25}
   m_EdgeRadius: 0
+--- !u!114 &4341195934669429368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4059142989744877938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a04fe4392d68f4da53b4e65cd052b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 4ce8898c3031bcb4ba78c99c510b2669, type: 3}
+  - {fileID: 21300000, guid: eb586a60e02c27140a2eec3e71484886, type: 3}
+  - {fileID: 21300000, guid: f8d6efe2f71459e42b362d7d5249bef5, type: 3}
+  - {fileID: 21300000, guid: 94c8dce303c2e0d41a67ff7ed31e5a6e, type: 3}
+  - {fileID: 21300000, guid: 2561d5d7fff3a8f4a881dde98f4aa8a7, type: 3}
+  - {fileID: 21300000, guid: 9775a6bbc58f37048b3a4bf4c96cd273, type: 3}
+  - {fileID: 21300000, guid: 8ea7581dcb042e14599b07bdf671bc35, type: 3}
+  - {fileID: 21300000, guid: 75b605d9bc3b0f84bad158785373459b, type: 3}

@@ -6,6 +6,10 @@ TagManager:
   tags:
   - ElementoBasura
   - Cubo
+  - verde
+  - amarillo
+  - azul
+  - rail
   layers:
   - Default
   - TransparentFX

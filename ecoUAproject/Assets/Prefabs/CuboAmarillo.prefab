@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1886390528334208869}
   - component: {fileID: 1229220503301784558}
   - component: {fileID: 7597367531296622493}
+  - component: {fileID: 8798072130194982796}
   m_Layer: 0
   m_Name: CuboAmarillo
   m_TagString: amarillo
@@ -117,5 +118,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc2e2169bfa0efe49b6baf8543cb90db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8798072130194982796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229220503301784557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5710152e329d31f4fba7ac7dbeb1af04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

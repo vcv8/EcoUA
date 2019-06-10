@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class ElemBasura : MonoBehaviour
 {
-    public Tipo tipo;
-    public float caidaPS;
+    public Sprite[] sprites;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Soy Basura de tipo " + tipo.colortipo);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.Translate(0, caidaPS * Time.deltaTime, 0); 
+        GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length)];
+        Vector2 tam = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
+        gameObject.GetComponent<BoxCollider2D>().size = tam;
+        //gameObject.GetComponent<BoxCollider2D>().offset = new Vector2 ((tam.x / 2), 0);
     }
 }

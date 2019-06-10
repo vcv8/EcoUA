@@ -6,11 +6,7 @@ public class Cubo : MonoBehaviour
 {	
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.D)){
-            transform.Translate(0.6f, 0, 0);
-        } else if(Input.GetKeyDown(KeyCode.A)){
-            transform.Translate(-0.6f, 0, 0);
-        }
+        
     }
 
     ///COLISIONES///
