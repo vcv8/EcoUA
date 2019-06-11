@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7661217307295430522}
   - component: {fileID: 7661217307295430521}
   - component: {fileID: 6500413218379113144}
+  - component: {fileID: 6533136790718802636}
   m_Layer: 0
   m_Name: papel
   m_TagString: azul
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7661217307295430525}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.14, y: 3.74, z: 0}
-  m_LocalScale: {x: 0.15584064, y: 0.15584064, z: 0.15584064}
+  m_LocalScale: {x: 0.14, y: 0.14, z: 0.14}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -141,3 +142,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.03, y: 6.4}
   m_EdgeRadius: 0
+--- !u!114 &6533136790718802636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7661217307295430525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a04fe4392d68f4da53b4e65cd052b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: cc9ee8f91cfddd14f9c716bfa0a67604, type: 3}
+  - {fileID: 21300000, guid: efc1ceeaea896e642b4896a6b9f21f98, type: 3}
+  - {fileID: 21300000, guid: 736da210f6eb81b4b883281d28908a0c, type: 3}
+  - {fileID: 21300000, guid: a844029e129f53747961e530ab0f0244, type: 3}
+  - {fileID: 21300000, guid: b73b34c18d8ebbf489eb931ef5843d13, type: 3}

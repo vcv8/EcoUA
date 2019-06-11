@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cubo : MonoBehaviour
 {	
+
     void Update()
     {
         
@@ -12,11 +13,15 @@ public class Cubo : MonoBehaviour
     ///COLISIONES///
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        GameObject indicador = GameObject.Find("IndicadorAcierto");
+
         if(collision.transform.tag == transform.tag)
         {
             Destroy(collision.gameObject);
 
             GameController.instance.score++;
+
+            indicador.GetComponent<AciertoFade>().Fadeop(true);
         }
         else
         {
@@ -28,6 +33,8 @@ public class Cubo : MonoBehaviour
                 GameController.instance.score = 0;
             }
             Handheld.Vibrate();
+
+            indicador.GetComponent<AciertoFade>().Fadeop(false);
         }
     }
 }
