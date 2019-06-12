@@ -17,14 +17,16 @@ public class Cubo : MonoBehaviour
 
         if(collision.transform.tag == transform.tag)
         {
+            indicador.GetComponent<AciertoFade>().Fadeop(transform.position.x, transform.position.y, true);
+            
             Destroy(collision.gameObject);
 
             GameController.instance.score++;
-
-            indicador.GetComponent<AciertoFade>().Fadeop(true);
         }
         else
         {
+            indicador.GetComponent<AciertoFade>().Fadeop(transform.position.x, transform.position.y, false);
+
             Destroy(collision.gameObject);
 
             GameController.instance.score--;
@@ -32,9 +34,7 @@ public class Cubo : MonoBehaviour
             {
                 GameController.instance.score = 0;
             }
-            Handheld.Vibrate();
-
-            indicador.GetComponent<AciertoFade>().Fadeop(false);
+            Handheld.Vibrate();            
         }
     }
 }

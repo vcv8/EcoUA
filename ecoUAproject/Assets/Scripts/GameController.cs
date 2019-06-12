@@ -14,11 +14,14 @@ public class GameController : MonoBehaviour
 
     //Textos
     public int score;
+    public int  maxScore;
     public Text scoreText;
     public Text levelFinishText;
+    public Text scoreEndText;
 
     //Game over, finish level y tiempos del nivel
     public bool finishLevel;
+    public bool finishGen;
     public float maxTimeLevel;
     float currentTimeLevel;
 
@@ -41,6 +44,9 @@ public class GameController : MonoBehaviour
     {
         currentTimeLevel = 0;
         score = 0;
+        float maxScoref = maxTimeLevel/GetComponent<GeneradorItems>().spawnRate;
+        maxScore = (int) maxScoref+1;
+        Debug.Log(maxScore);
     }
 
     // Update is called once per frame
@@ -51,8 +57,22 @@ public class GameController : MonoBehaviour
         currentTimeLevel += Time.deltaTime;
         if (currentTimeLevel >= maxTimeLevel)
         {
-            finishLevel = true;
-            levelFinishText.gameObject.SetActive(true);
+            finishGen = true;
+
+            object[] basuras = FindObjectsOfType<ElemBasura>();
+
+            if(basuras.Length == 0){
+                finishLevel = true;
+                levelFinishText.gameObject.SetActive(true);
+                if(score == maxScore){
+                    scoreEndText.text = "Oro";
+                }else if(score < ((maxScore*80)/100)){
+                    scoreEndText.text = "Bronce";
+                }else{
+                    scoreEndText.text = "Plata";
+                }
+                scoreEndText.gameObject.SetActive(true);
+            }
         }
     }
 

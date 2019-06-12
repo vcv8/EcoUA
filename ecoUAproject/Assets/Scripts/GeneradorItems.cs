@@ -17,7 +17,7 @@ public class GeneradorItems : MonoBehaviour
     void Update()
     {
         timeSinceLastSpawnBasura += Time.deltaTime; //Vamos comprobando y actualizando el tiempo 
-        if (timeSinceLastSpawnBasura >= spawnRate && !GameController.instance.finishLevel) //Entra cada vez que se supere SpawnRate
+        if (timeSinceLastSpawnBasura >= spawnRate && !GameController.instance.finishGen) //Entra cada vez que se supere SpawnRate
         {
             GameObject itemBasura = allBasuraItems[Random.Range(0, allBasuraItems.Length)]; //Objeto aleatorio 
             float spawnXPosition = Random.Range(GameController.instance.limitSpawnX.x, GameController.instance.limitSpawnX.y); //Posicion aleatoria

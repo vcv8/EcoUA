@@ -11,12 +11,12 @@ public class AciertoFade : MonoBehaviour
         actual.a = 0f;
         GetComponent<SpriteRenderer>().color = actual;
 
-        Debug.Log(actual.a);
-
     }
 
     // Start is called before the first frame update
-    public void Fadeop(bool tipo){
+    public void Fadeop(float x, float y, bool tipo){
+        Vector3 position = new Vector3(x, y+0.8f, 0f);
+
         if(tipo){
             GetComponent<SpriteRenderer>().sprite = sprites[0];
         }else{
@@ -26,6 +26,8 @@ public class AciertoFade : MonoBehaviour
         Color actual = GetComponent<SpriteRenderer>().color;
         actual.a = 1f;
         GetComponent<SpriteRenderer>().color = actual;
+
+        transform.position = position;
 
         StartCoroutine(FadeIterator());
     }
