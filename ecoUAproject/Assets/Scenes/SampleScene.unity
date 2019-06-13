@@ -185,8 +185,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232581560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.1, z: 0}
-  m_LocalScale: {x: 5.849, y: -0.16833316, z: 1}
+  m_LocalPosition: {x: 0, y: -4.1, z: 0.01}
+  m_LocalScale: {x: 5.5, y: -0.15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -346,8 +346,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805942882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.1, z: 0}
-  m_LocalScale: {x: 5.849, y: -0.16833316, z: 1}
+  m_LocalPosition: {x: 0, y: -2.1, z: 0.01}
+  m_LocalScale: {x: 5.5, y: -0.15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -671,8 +671,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362165724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.1, z: 0}
-  m_LocalScale: {x: 5.849, y: -0.16833316, z: 1}
+  m_LocalPosition: {x: 0, y: -3.1, z: 0.01}
+  m_LocalScale: {x: 5.5, y: -0.15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -707,7 +707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b3f2420c6d2be4f92fa1fe48e4165a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed_scrollDown: 1.5
+  speed_scrollDown: 1
   limitSpawnX: {x: -2.45, y: 2.45}
   score: 0
   maxScore: 0
@@ -716,7 +716,7 @@ MonoBehaviour:
   scoreEndText: {fileID: 1552042816}
   finishLevel: 0
   finishGen: 0
-  maxTimeLevel: 30
+  maxTimeLevel: 20
 --- !u!4 &1401917482
 Transform:
   m_ObjectHideFlags: 0
@@ -747,7 +747,7 @@ MonoBehaviour:
   - {fileID: 5747578328659981889, guid: 1d972cc771a8da246b38dc9dc7d6c9ee, type: 3}
   - {fileID: 4059142989744877938, guid: 7444fab83d8c4b546b78e77686569d86, type: 3}
   - {fileID: 7661217307295430525, guid: 60101ebf17d7ab9479d89938dd419640, type: 3}
-  spawnRate: 1.5
+  spawnRate: 4
 --- !u!1 &1502776685
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,7 +821,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1502776685}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.07, y: 0.03, z: 0}
+  m_LocalPosition: {x: 0.07, y: 0.03, z: 0.1}
   m_LocalScale: {x: 0.4016221, y: 0.4016221, z: 0.4016221}
   m_Children: []
   m_Father: {fileID: 0}
@@ -893,7 +893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.932259, b: 0.0141509175, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -937,12 +937,12 @@ PrefabInstance:
     - target: {fileID: 6528126032166173918, guid: 5ee1f00c003540040bfcb9f597901dba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.288
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 6528126032166173918, guid: 5ee1f00c003540040bfcb9f597901dba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.079
+      value: -2.06
       objectReference: {fileID: 0}
     - target: {fileID: 6528126032166173918, guid: 5ee1f00c003540040bfcb9f597901dba,
         type: 3}
@@ -994,6 +994,11 @@ PrefabInstance:
       propertyPath: railGO
       value: 
       objectReference: {fileID: 805942882}
+    - target: {fileID: 62414618426382496, guid: 5ee1f00c003540040bfcb9f597901dba,
+        type: 3}
+      propertyPath: railGOy
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ee1f00c003540040bfcb9f597901dba, type: 3}
 --- !u!1 &1980291909
@@ -1085,7 +1090,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980291909}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.17, y: 3.7, z: -0.10854198}
+  m_LocalPosition: {x: -6.17, y: 3.7, z: 0}
   m_LocalScale: {x: 0.09988766, y: 0.09988766, z: 0.09988766}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1258,6 +1263,11 @@ PrefabInstance:
       propertyPath: railGO
       value: 
       objectReference: {fileID: 1362165724}
+    - target: {fileID: 8798072130194982796, guid: a44dc803b4faaa545abf8b26080bf106,
+        type: 3}
+      propertyPath: railGOy
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a44dc803b4faaa545abf8b26080bf106, type: 3}
 --- !u!1001 &6928233206252641213
@@ -1332,5 +1342,10 @@ PrefabInstance:
       propertyPath: railGO
       value: 
       objectReference: {fileID: 232581560}
+    - target: {fileID: 6928233207043459239, guid: bd1b51e9eae3dd542a3c25735abf484a,
+        type: 3}
+      propertyPath: railGOy
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd1b51e9eae3dd542a3c25735abf484a, type: 3}

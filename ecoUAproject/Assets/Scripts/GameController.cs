@@ -45,7 +45,11 @@ public class GameController : MonoBehaviour
         currentTimeLevel = 0;
         score = 0;
         float maxScoref = maxTimeLevel/GetComponent<GeneradorItems>().spawnRate;
-        maxScore = (int) maxScoref+1;
+        if((maxTimeLevel%GetComponent<GeneradorItems>().spawnRate) != 0f){
+            maxScore = (int) maxScoref+1;
+        }else{
+            maxScore = (int) maxScoref;
+        }
         Debug.Log(maxScore);
     }
 
@@ -66,10 +70,13 @@ public class GameController : MonoBehaviour
                 levelFinishText.gameObject.SetActive(true);
                 if(score == maxScore){
                     scoreEndText.text = "Oro";
+                    scoreEndText.color =  new Color(1f, 0.9f, 0.01f, 1f);
                 }else if(score < ((maxScore*80)/100)){
                     scoreEndText.text = "Bronce";
+                    scoreEndText.color =  new Color(0.7264151f, 0.6003513f, 0.373487f, 1f);
                 }else{
                     scoreEndText.text = "Plata";
+                    scoreEndText.color =  new Color(0.8679245f, 0.8679245f, 0.8679245f, 1f);
                 }
                 scoreEndText.gameObject.SetActive(true);
             }

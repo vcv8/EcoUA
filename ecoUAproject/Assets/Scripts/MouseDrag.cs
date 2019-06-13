@@ -5,6 +5,7 @@ using UnityEngine;
 public class MouseDrag : MonoBehaviour {
 
     public GameObject railGO;
+    //public GameObject railGOy;
     private float distance = 10;
     
     public void Start(){
@@ -14,17 +15,34 @@ public class MouseDrag : MonoBehaviour {
     private void OnMouseDrag()
     {
         float ycorrected = railGO.transform.position.y;
+        //float xcorrected = railGOy.transform.position.x;
 
         Vector3 mousePos = new Vector3(Input.mousePosition.x, 0, distance);
         Vector3 objectPos = Camera.main.ScreenToWorldPoint(mousePos);
+        //Vector2 tam = railGO.GetComponent<SpriteRenderer>().sprite.bounds.size;
+        Vector3 tam = railGO.transform.localScale;
+        //Vector3 tamY = railGOy.transform.localScale;
 
-        if(objectPos[0] < -2.5f){
-            objectPos[0] = -2.5f;
-        }else if(objectPos[0] > 2.5f){
-            objectPos[0] = 2.5f;
-        }
-        objectPos[1] = ycorrected;
-        
-        transform.position = objectPos;
+       // if(transform.position.y == ycorrected){
+            if(objectPos.x < -(tam.x/2)){
+                objectPos.x = (float) -(tam.x/2);
+            }else if(objectPos.x > (tam.x/2)){
+                objectPos.x = (float) (tam.x/2);
+            }
+            objectPos.y = transform.position.y;
+            
+            transform.position = objectPos;
+       // }
+
+        /*if(transform.position.x == xcorrected){
+            if(objectPos.y > ycorrected){
+                objectPos.y = ycorrected;
+            }else if(objectPos.y < (ycorrected - tamY.y)){
+                objectPos.y = (ycorrected - tamY.y);
+            }
+            objectPos.x = transform.position.x;
+            
+            transform.position = objectPos;
+        }*/
     }
 }
