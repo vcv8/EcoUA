@@ -7,14 +7,16 @@ public class MouseDrag : MonoBehaviour {
     public GameObject railGO;
     //public GameObject railGOy;
     private float distance = 10;
-    
+
     public void Start(){
         Vector3 startPos = new Vector3(0, railGO.transform.position.y, transform.position.z);
         transform.position = startPos;
     }
-    private void OnMouseDrag()
+
+#if UNITY_EDITOR    
+    /*private void OnMouseDrag()
     {
-        float ycorrected = railGO.transform.position.y;
+        //float ycorrected = railGO.transform.position.y;
         //float xcorrected = railGOy.transform.position.x;
 
         Vector3 mousePos = new Vector3(Input.mousePosition.x, 0, distance);
@@ -34,7 +36,7 @@ public class MouseDrag : MonoBehaviour {
             transform.position = objectPos;
        // }
 
-        /*if(transform.position.x == xcorrected){
+       *//*if(transform.position.x == xcorrected){
             if(objectPos.y > ycorrected){
                 objectPos.y = ycorrected;
             }else if(objectPos.y < (ycorrected - tamY.y)){
@@ -44,5 +46,21 @@ public class MouseDrag : MonoBehaviour {
             
             transform.position = objectPos;
         }*/
+   // }
+#endif
+
+    public void onTouchStay(Vector3 pos)
+    {
+        Vector3 mousePos = new Vector3(pos.x, 0, distance); 
+        Vector3 tam = railGO.transform.localScale;
+        Vector3 objectPos = Camera.main.ScreenToWorldPoint(mousePos);
+        if(objectPos.x < -(tam.x/2)){
+            objectPos.x = (float) -(tam.x/2);
+        }else if(objectPos.x > (tam.x/2)){
+            objectPos.x = (float) (tam.x/2);
+        }
+        objectPos.y = transform.position.y;
+
+        transform.position = objectPos;
     }
 }

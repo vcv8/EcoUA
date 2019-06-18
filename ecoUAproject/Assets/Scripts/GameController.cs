@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     public Text scoreText;
     public Text levelFinishText;
     public Text scoreEndText;
+    public GameObject botonesFinal;
 
     //Game over, finish level y tiempos del nivel
     public bool finishLevel;
@@ -50,7 +51,6 @@ public class GameController : MonoBehaviour
         }else{
             maxScore = (int) maxScoref;
         }
-        Debug.Log(maxScore);
     }
 
     // Update is called once per frame
@@ -79,6 +79,7 @@ public class GameController : MonoBehaviour
                     scoreEndText.color =  new Color(0.8679245f, 0.8679245f, 0.8679245f, 1f);
                 }
                 scoreEndText.gameObject.SetActive(true);
+                botonesFinal.SetActive(true);
             }
         }
     }
