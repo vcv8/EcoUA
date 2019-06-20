@@ -1,9 +1,10 @@
 Android
 PlayerPath?
-C:/Users/Usuario/Documents/EcoUA/EcoUA/ecoUAd.apk
+C:/Users/Usuario/Documents/EcoUA/EcoUA/ecoUA.apk
 SceneListBegin?
 Assets/Menu.unity
 Assets/EscenaNivel.unity
+Assets/(2)EscenaNivel.unity
 SceneListEnd?
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Menu
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret

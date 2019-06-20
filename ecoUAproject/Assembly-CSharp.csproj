@@ -56,9 +56,12 @@
      <Compile Include="Assets\Scripts\AciertoFade.cs" />
      <Compile Include="Assets\Scripts\ColisionContenedor.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\GameData.cs" />
      <Compile Include="Assets\Scripts\GeneradorItems.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\MouseDrag.cs" />
+     <Compile Include="Assets\Scripts\Save.cs" />
+     <Compile Include="Assets\Scripts\SaveScript.cs" />
      <Compile Include="Assets\Scripts\ScrollDown.cs" />
      <Compile Include="Assets\Scripts\TouchControl.cs" />
      <Compile Include="Assets\ScriptsTest\BasuraGen.cs" />

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/EscenaNivel.unity
     guid: 363c81d4a14bdd14fa148defd34f7d53
+  - enabled: 1
+    path: Assets/(2)EscenaNivel.unity
+    guid: f8d6d50597c34284aa61023d2cd944d2
   m_configObjects: {}

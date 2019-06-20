@@ -10,6 +10,7 @@ TagManager:
   - amarillo
   - azul
   - rail
+  - marron
   layers:
   - Default
   - TransparentFX
