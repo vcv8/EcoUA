@@ -12,6 +12,24 @@ public class Menu : MonoBehaviour
 		gController.GetComponent<GameData>().ShowData();
     }
 
+    public void Update() {
+        if( SceneManager.GetActiveScene().name == "Menu" ) {
+            GameObject go = GameObject.Find("BotonesMenu");
+            if(go != null && go.activeSelf){
+                if(Input.GetKeyDown(KeyCode.Escape)){
+                    QuitGame();
+                }
+            }else{
+                go = GameObject.Find("LevelSelector");
+                if(go != null && go.activeSelf){
+                    if(Input.GetKeyDown(KeyCode.Escape)){
+                        ShowMenu();
+                    }
+                }
+            }
+        }
+    }
+
     public void StartLevel()
     {
     	GameData.loadedLevel = GameObject.Find("GameController").GetComponent<GameData>().LevelInteger;
