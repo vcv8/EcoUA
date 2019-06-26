@@ -5,14 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+	public void Start()
+    {
+    	GameObject gController = GameObject.Find("GameController");
+		gController.GetComponent<SaveScript>().LoadData();
+		gController.GetComponent<GameData>().ShowData();
+    }
+
     public void StartLevel()
     {
+    	GameData.loadedLevel = GameObject.Find("GameController").GetComponent<GameData>().LevelInteger;
         SceneManager.LoadScene(1);
     }
 
-    public void NextLevel()
+    public void toLevel(int nivel)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    	if(GameObject.Find("GameController").GetComponent<GameData>().LevelInteger >= nivel){
+    		GameData.loadedLevel = nivel;
+        	SceneManager.LoadScene(1);
+    	}
     }
 
     public void QuitGame()

@@ -26,6 +26,7 @@ public class GameController : MonoBehaviour
     public float maxTimeLevel;
     float currentTimeLevel;
 
+
     private void Awake()
     {
         if (GameController.instance == null)
@@ -45,12 +46,13 @@ public class GameController : MonoBehaviour
     {
         currentTimeLevel = 0;
         score = 0;
-        float maxScoref = maxTimeLevel/GetComponent<GeneradorItems>().spawnRate;
+        maxScore = 0;
+        /*float maxScoref = maxTimeLevel/GetComponent<GeneradorItems>().spawnRate;
         if((maxTimeLevel%GetComponent<GeneradorItems>().spawnRate) != 0f){
             maxScore = (int) maxScoref+1;
         }else{
             maxScore = (int) maxScoref;
-        }
+        }*/
     }
 
     // Update is called once per frame
@@ -65,21 +67,12 @@ public class GameController : MonoBehaviour
 
             object[] basuras = FindObjectsOfType<ElemBasura>();
 
+            // Finalizacion total de nivel
             if(basuras.Length == 0){
-                finishLevel = true;
-                levelFinishText.gameObject.SetActive(true);
-                if(score == maxScore){
-                    scoreEndText.text = "Oro";
-                    scoreEndText.color =  new Color(1f, 0.9f, 0.01f, 1f);
-                }else if(score < ((maxScore*80)/100)){
-                    scoreEndText.text = "Bronce";
-                    scoreEndText.color =  new Color(0.7264151f, 0.6003513f, 0.373487f, 1f);
-                }else{
-                    scoreEndText.text = "Plata";
-                    scoreEndText.color =  new Color(0.8679245f, 0.8679245f, 0.8679245f, 1f);
+                if(!finishLevel){
+                    levelEnd();
+                    finishLevel = true;
                 }
-                scoreEndText.gameObject.SetActive(true);
-                botonesFinal.SetActive(true);
             }
         }
     }
@@ -90,5 +83,31 @@ public class GameController : MonoBehaviour
         {
             GameController.instance = null;
         }
+    }
+
+    private void levelEnd()
+    {
+        //Cargamos resultados anteriores
+        GetComponent<SaveScript>().LoadData();
+
+        levelFinishText.gameObject.SetActive(true);
+        if(score == maxScore){
+            scoreEndText.text = "Oro";
+            scoreEndText.color =  new Color(1f, 0.9f, 0.01f, 1f);
+            GetComponent<GameData>().CreateData(GameData.loadedLevel, 3);
+        }else if(score < ((maxScore*80)/100)){
+            scoreEndText.text = "Bronce";
+            scoreEndText.color =  new Color(0.7264151f, 0.6003513f, 0.373487f, 1f);
+            GetComponent<GameData>().CreateData(GameData.loadedLevel, 1);
+        }else{
+            scoreEndText.text = "Plata";
+            scoreEndText.color =  new Color(0.8679245f, 0.8679245f, 0.8679245f, 1f);
+            GetComponent<GameData>().CreateData(GameData.loadedLevel, 2);
+        }
+        scoreEndText.gameObject.SetActive(true);
+        botonesFinal.SetActive(true);
+
+        //Guardar resultados
+        GetComponent<SaveScript>().SaveData();
     }
 }

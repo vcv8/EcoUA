@@ -11,6 +11,8 @@ TagManager:
   - azul
   - rail
   - marron
+  - blevel
+  - mlevel
   layers:
   - Default
   - TransparentFX

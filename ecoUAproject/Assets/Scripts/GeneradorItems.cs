@@ -25,6 +25,8 @@ public class GeneradorItems : MonoBehaviour
             Instantiate(itemBasura, new Vector2(spawnXPosition, 6.0f), Quaternion.identity); //Instanciamos objeto
 
             timeSinceLastSpawnBasura = 0;
+
+            GetComponent<GameController>().maxScore += 1;
         }
     }
 }

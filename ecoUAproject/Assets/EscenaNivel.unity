@@ -369,7 +369,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2027223256}
-        m_MethodName: NextLevel
+        m_MethodName: StartLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1044,6 +1044,7 @@ GameObject:
   - component: {fileID: 1401917483}
   - component: {fileID: 1401917484}
   - component: {fileID: 1401917485}
+  - component: {fileID: 1401917486}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1063,7 +1064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b3f2420c6d2be4f92fa1fe48e4165a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed_scrollDown: 1.5
+  speed_scrollDown: 1.2
   limitSpawnX: {x: -2.45, y: 2.45}
   score: 0
   maxScore: 0
@@ -1073,7 +1074,7 @@ MonoBehaviour:
   botonesFinal: {fileID: 2027223254}
   finishLevel: 0
   finishGen: 0
-  maxTimeLevel: 30
+  maxTimeLevel: 15
 --- !u!4 &1401917482
 Transform:
   m_ObjectHideFlags: 0
@@ -1117,7 +1118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e5124446e318649bef3ffe9cca39b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalLevels: 2
   textLevel: {fileID: 0}
   textScore: {fileID: 0}
 --- !u!114 &1401917485
@@ -1130,6 +1130,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26e9eec1af1899b4ebcde5d37ddb02fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1401917486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401917480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5c81223a674da4a8c60dfe1e7b7e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1502776685

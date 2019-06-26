@@ -50,6 +50,8 @@ public class SaveScript : MonoBehaviour {
         else
         {
             Debug.LogWarning("Save file doesn't exist.");
+            gameData.CreateData(0, 0);
+            SaveData();
         }
     }
 }

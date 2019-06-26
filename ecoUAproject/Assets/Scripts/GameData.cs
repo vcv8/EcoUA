@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameData : MonoBehaviour {
     public int LevelInteger { get; set; }
     public int[] ScoreIntegers { get; set; }
-    public int  totalLevels;
+    public static int totalLevels = 8; // Numero total de niveles jugables
+    public static int loadedLevel = 0; // Nivel que va a cargarse en la escena de nivel
 
     [SerializeField]
     private Text textLevel;
@@ -17,13 +19,23 @@ public class GameData : MonoBehaviour {
 
     public void CreateData(int level, int score)
     {
-        LevelInteger = level;
-        ScoreIntegers[level] = score;
+        if(level+1 > LevelInteger){
+            if(level+1 < ScoreIntegers.Length){
+                LevelInteger = level+1;
+            }
+        }
+        if(score > ScoreIntegers[level]){
+            ScoreIntegers[level] = score;
+        }
     }
 
     public void ShowData()
     {
-        textLevel.text = LevelInteger.ToString();
-        textScore.text = ScoreIntegers[LevelInteger].ToString();
+        if( SceneManager.GetActiveScene().name == "Menu" ) {
+            textLevel.text = "Nivel " + LevelInteger.ToString();
+            textScore.text = ScoreIntegers[LevelInteger].ToString();
+        }else{
+            Debug.Log("No place to show data.");
+        }
     }
 }
