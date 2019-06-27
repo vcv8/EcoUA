@@ -26,6 +26,8 @@ public class GameController : MonoBehaviour
     public bool finishGen;
     public float maxTimeLevel;
     float currentTimeLevel;
+    float introTime;
+    private bool startLevel;
 
 
     private void Awake()
@@ -48,38 +50,47 @@ public class GameController : MonoBehaviour
         currentTimeLevel = 0;
         score = 0;
         maxScore = 0;
-        /*float maxScoref = maxTimeLevel/GetComponent<GeneradorItems>().spawnRate;
-        if((maxTimeLevel%GetComponent<GeneradorItems>().spawnRate) != 0f){
-            maxScore = (int) maxScoref+1;
-        }else{
-            maxScore = (int) maxScoref;
-        }*/
+        introTime = 0;
+        GameObject.FindWithTag("IntroLevel").GetComponent<Text>().text = "Nivel " + GameData.loadedLevel;
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = score.ToString();
+        if(!startLevel){
+            introTime += Time.deltaTime;
+            
+            if(introTime > 1.5f && introTime < 2.2f){
+                GameObject.Find("LevelTextContainer").GetComponent<Animator>().SetTrigger("DoAnimation");
+            }else if(introTime >= 2.2f){
+                GetComponent<GeneradorItems>().startGenerator();
+                currentTimeLevel = 0;
+                startLevel = true;
+            }
+        }else{
+            scoreText.text = score.ToString();
 
-        currentTimeLevel += Time.deltaTime;
-        if (currentTimeLevel >= maxTimeLevel)
-        {
-            finishGen = true;
+            currentTimeLevel += Time.deltaTime;
+            if (currentTimeLevel >= maxTimeLevel)
+            {
+                finishGen = true;
 
-            object[] basuras = FindObjectsOfType<ElemBasura>();
+                object[] basuras = FindObjectsOfType<ElemBasura>();
 
-            // Finalizacion total de nivel
-            if(basuras.Length == 0){
-                if(!finishLevel){
-                    levelEnd();
-                    finishLevel = true;
+                // Finalizacion total de nivel
+                if(basuras.Length == 0){
+                    if(!finishLevel){
+                        levelEnd();
+                        finishLevel = true;
+                    }
                 }
             }
-        }
 
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            SceneManager.LoadScene(0);
+            if(Input.GetKeyDown(KeyCode.Escape)){
+                SceneManager.LoadScene(0);
+            }
         }
+        
     }
 
     private void OnDestroy()

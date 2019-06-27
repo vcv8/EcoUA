@@ -36,6 +36,15 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void nextLevel()
+    {
+        GameData gd = GameObject.Find("GameController").GetComponent<GameData>();
+    	if( gd.LevelInteger >= (GameData.loadedLevel+1) ) {
+    		GameData.loadedLevel++;
+        	SceneManager.LoadScene(1);
+    	}
+    }
+
     public void toLevel(int nivel)
     {
     	if(GameObject.Find("GameController").GetComponent<GameData>().LevelInteger >= nivel){
