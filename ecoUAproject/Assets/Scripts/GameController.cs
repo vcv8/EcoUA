@@ -107,23 +107,42 @@ public class GameController : MonoBehaviour
         GetComponent<SaveScript>().LoadData();
 
         levelFinishText.gameObject.SetActive(true);
-        if(score == maxScore){
+
+        GameObject botonNext = botonesFinal.transform.GetChild (0).gameObject;
+
+        if(score < ((maxScore*40)/100)){
+            scoreEndText.text = "=(";
+            scoreEndText.color =  new Color(0.5f, 0.5f, 0.5f, 1f);
+
+            botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(false); } );
+
+            botonNext.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Reintentar";
+            GameObject.Find("levelFinishText").GetComponent<Text>().text = "Nivel fracasado.";
+
+        }else if(score == maxScore){
             scoreEndText.text = "Oro";
             scoreEndText.color =  new Color(1f, 0.9f, 0.01f, 1f);
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 3);
-        }else if(score < ((maxScore*80)/100)){
+
+            botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
+        }else if(score < ((maxScore*70)/100)){
             scoreEndText.text = "Bronce";
             scoreEndText.color =  new Color(0.7264151f, 0.6003513f, 0.373487f, 1f);
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 1);
+
+            botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
         }else{
             scoreEndText.text = "Plata";
             scoreEndText.color =  new Color(0.8679245f, 0.8679245f, 0.8679245f, 1f);
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 2);
+
+            botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
         }
+
+        //Guardar Resultados
+        GetComponent<SaveScript>().SaveData();
+
         scoreEndText.gameObject.SetActive(true);
         botonesFinal.SetActive(true);
-
-        //Guardar resultados
-        GetComponent<SaveScript>().SaveData();
     }
 }
