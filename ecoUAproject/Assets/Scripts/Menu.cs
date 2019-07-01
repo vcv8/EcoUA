@@ -20,12 +20,12 @@ public class Menu : MonoBehaviour
                     QuitGame();
                 }
             }else{
-                go = GameObject.Find("LevelSelector");
-                if(go != null && go.activeSelf){
+                //go = GameObject.Find("LevelSelector");
+                //if(go != null && go.activeSelf){
                     if(Input.GetKeyDown(KeyCode.Escape)){
                         ShowMenu();
                     }
-                }
+                //}
             }
         }
     }

@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
     public int  maxScore;
     public Text scoreText;
     public Text levelFinishText;
-    public Text scoreEndText;
+    public Image scoreEndImage;
     public GameObject botonesFinal;
 
     //Game over, finish level y tiempos del nivel
@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
     float currentTimeLevel;
     float introTime;
     private bool startLevel;
+    public Sprite[] medallas;
 
 
     private void Awake()
@@ -62,7 +63,12 @@ public class GameController : MonoBehaviour
             
             if(introTime > 1.5f && introTime < 2.2f){
                 GameObject.Find("LevelTextContainer").GetComponent<Animator>().SetTrigger("DoAnimation");
+                if(GameObject.Find("FlechasContainer") != null && GameObject.Find("FlechasContainer").activeSelf){
+                    GameObject.Find("FlechasContainer").SetActive(false);
+                }
+                
             }else if(introTime >= 2.2f){
+                //GameObject.Find("FlechasContainer").SetActive(false);
                 GetComponent<GeneradorItems>().startGenerator();
                 currentTimeLevel = 0;
                 startLevel = true;
@@ -111,8 +117,9 @@ public class GameController : MonoBehaviour
         GameObject botonNext = botonesFinal.transform.GetChild (0).gameObject;
 
         if(score < ((maxScore*40)/100)){
-            scoreEndText.text = "=(";
-            scoreEndText.color =  new Color(0.5f, 0.5f, 0.5f, 1f);
+            scoreEndImage.sprite = medallas[0];
+            //scoreEndText.text = "=(";
+            //scoreEndText.color =  new Color(0.5f, 0.5f, 0.5f, 1f);
 
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(false); } );
 
@@ -120,20 +127,23 @@ public class GameController : MonoBehaviour
             GameObject.Find("levelFinishText").GetComponent<Text>().text = "Nivel fracasado.";
 
         }else if(score == maxScore){
-            scoreEndText.text = "Oro";
-            scoreEndText.color =  new Color(1f, 0.9f, 0.01f, 1f);
+            scoreEndImage.sprite = medallas[3];
+            //scoreEndText.text = "Oro";
+            //scoreEndText.color =  new Color(1f, 0.9f, 0.01f, 1f);
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 3);
 
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
         }else if(score < ((maxScore*70)/100)){
-            scoreEndText.text = "Bronce";
-            scoreEndText.color =  new Color(0.7264151f, 0.6003513f, 0.373487f, 1f);
+            scoreEndImage.sprite = medallas[1];
+            //scoreEndText.text = "Bronce";
+            //scoreEndText.color =  new Color(0.7264151f, 0.6003513f, 0.373487f, 1f);
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 1);
 
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
         }else{
-            scoreEndText.text = "Plata";
-            scoreEndText.color =  new Color(0.8679245f, 0.8679245f, 0.8679245f, 1f);
+            scoreEndImage.sprite = medallas[2];
+            //scoreEndText.text = "Plata";
+            //scoreEndText.color =  new Color(0.8679245f, 0.8679245f, 0.8679245f, 1f);
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 2);
 
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
@@ -142,7 +152,7 @@ public class GameController : MonoBehaviour
         //Guardar Resultados
         GetComponent<SaveScript>().SaveData();
 
-        scoreEndText.gameObject.SetActive(true);
+        scoreEndImage.gameObject.SetActive(true);
         botonesFinal.SetActive(true);
     }
 }
