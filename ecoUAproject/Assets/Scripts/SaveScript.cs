@@ -40,9 +40,16 @@ public class SaveScript : MonoBehaviour {
             {
                 save = (Save)binaryFormatter.Deserialize(fileStream);
             }
- 
+
+            if(save.SavedScores.Length < gameData.ScoreIntegers.Length){
+                for(int i = 0; i < save.SavedScores.Length; i++){
+                    gameData.ScoreIntegers[i] = save.SavedScores[i];
+                }
+                
+            }else{
+                gameData.ScoreIntegers = save.SavedScores;
+            }
             gameData.LevelInteger = save.SavedLevel;
-            gameData.ScoreIntegers = save.SavedScores;
             gameData.ShowData();
  
             Debug.Log("Data Loaded");
