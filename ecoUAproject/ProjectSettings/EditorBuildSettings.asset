@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/2-EscenaNivel.unity
     guid: 6e9f614b52889ed4681de7fd03c92d4d
+  - enabled: 1
+    path: Assets/3-EscenaNivel.unity
+    guid: 73d5f76de90656f46a640d3af65714b8
+  - enabled: 1
+    path: Assets/4-EscenaNivel.unity
+    guid: 76ee1d3cd07843e4588df16d6b36ec85
+  - enabled: 1
+    path: Assets/5-EscenaNivel.unity
+    guid: 79d6a59c6cd6b7a47adc4fcb2a66d757
   m_configObjects: {}

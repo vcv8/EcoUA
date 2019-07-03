@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameData : MonoBehaviour {
     public int LevelInteger { get; set; }
     public int[] ScoreIntegers { get; set; }
-    public static int totalLevels = 11; // Numero total de niveles jugables + 1
+    public static int totalLevels = 26; // Numero total de niveles jugables + 1
     public static int loadedLevel = 0; // Nivel que va a cargarse en la escena de nivel
 
     [SerializeField]

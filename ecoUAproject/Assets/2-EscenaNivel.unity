@@ -315,7 +315,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a807ec675319b0a4bb67b35df5b175bf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -795,7 +795,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a807ec675319b0a4bb67b35df5b175bf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1284,7 +1284,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a807ec675319b0a4bb67b35df5b175bf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1555,7 +1555,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 85dd362b77480a7468d661e8b8208ac2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c09fc155267b71419988da36f1db6a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1574,8 +1574,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1502776685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07, y: 0.03, z: 0.1}
-  m_LocalScale: {x: 0.516486, y: 0.516486, z: 0.516486}
+  m_LocalPosition: {x: 0.003, y: -0.068, z: 0.1}
+  m_LocalScale: {x: 0.5447143, y: 0.5447143, z: 0.5447143}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1593,17 +1593,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fondos:
-  - {fileID: 21300000, guid: 89ad911e9cd52bb4aa17033b545b43dc, type: 3}
-  - {fileID: 21300000, guid: 76761027146e52f4bb0a7a26acf96598, type: 3}
-  - {fileID: 21300000, guid: 841231a75b0f7c14286509301449a3d4, type: 3}
-  - {fileID: 21300000, guid: 78afdb7fdcc120343a2454f0e5061183, type: 3}
-  - {fileID: 21300000, guid: b99c84ce25c9de84a9e6ba303e4ec37a, type: 3}
-  - {fileID: 21300000, guid: c0912ac69db42ad4a814ce0e1d6acfcd, type: 3}
-  - {fileID: 21300000, guid: 688f2427a54bb8048a1401801133d317, type: 3}
-  - {fileID: 21300000, guid: cca6f6aac2f5eb44e9ed62e4e3f7ee39, type: 3}
-  - {fileID: 21300000, guid: 2a9cbad0cb460ec4d9b43a5ab7e97e5a, type: 3}
-  - {fileID: 21300000, guid: 687d1c1e8d397654486872425ebd583a, type: 3}
-  - {fileID: 21300000, guid: 94d85f02d34bad8459cc4329dbb79481, type: 3}
+  - {fileID: 21300000, guid: 9741a87b8fef1b249b82055eebd4b6a9, type: 3}
+  - {fileID: 21300000, guid: 2e4cab568e2ed174baa552eef2c04639, type: 3}
+  - {fileID: 21300000, guid: a2654d3ec061da340b5e3a829359bb6c, type: 3}
+  - {fileID: 21300000, guid: 14ca806d50771224ab28ce06e6ed8d05, type: 3}
+  - {fileID: 21300000, guid: c079ad9e1e45f494686d0149b4656100, type: 3}
+  - {fileID: 21300000, guid: 3c09fc155267b71419988da36f1db6a0, type: 3}
+  - {fileID: 21300000, guid: 4c56e261d8f1992468283d0a271b4cf4, type: 3}
+  - {fileID: 21300000, guid: 2e51f70b7769586429a670ec50037d7b, type: 3}
+  - {fileID: 21300000, guid: 3cc95263fc9b2b04bb56341211c2637e, type: 3}
+  - {fileID: 21300000, guid: 35b9168b18aeba4498b37d79ed8e3cba, type: 3}
+  - {fileID: 21300000, guid: 68cbd31fd3f92e640b4d2e5ee732a476, type: 3}
 --- !u!1 &1540258034
 GameObject:
   m_ObjectHideFlags: 0

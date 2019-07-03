@@ -72,6 +72,12 @@ public class Menu : MonoBehaviour
             SceneManager.LoadScene(1);
         } else if(GameData.loadedLevel > 5 && GameData.loadedLevel <= 10) {
             SceneManager.LoadScene(2);
+        } else if(GameData.loadedLevel > 10 && GameData.loadedLevel <= 15) {
+            SceneManager.LoadScene(3);
+        } else if(GameData.loadedLevel > 15 && GameData.loadedLevel <= 20) {
+            SceneManager.LoadScene(4);
+        } else if(GameData.loadedLevel > 20 && GameData.loadedLevel <= 25) {
+            SceneManager.LoadScene(5);
         }
     }
 
