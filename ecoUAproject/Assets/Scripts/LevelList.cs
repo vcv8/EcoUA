@@ -15,18 +15,14 @@ public class LevelList : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		creaBotones();
+
     	botones = GameObject.FindGameObjectsWithTag("blevel");
     	medallas = GameObject.FindGameObjectsWithTag("mlevel");
     	gameData = GameObject.Find("GameController").GetComponent<GameData>();
 
         rellenaMedallas();
         destapaBotones();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void rellenaMedallas(){
@@ -60,4 +56,23 @@ public class LevelList : MonoBehaviour
     		}
     	}
     }
+
+	private void creaBotones(){
+		int numLevels = GameData.totalLevels - 1;
+		GameObject boton = transform.GetChild(0).gameObject;
+
+		for(int i = 2; i <= numLevels; i++){
+			GameObject iBoton = (GameObject)Instantiate(boton, transform);
+			
+			iBoton.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Nivel " + i;
+			//iBoton.GetComponent<Button>().onClick.AddListener( () => GetComponent<Menu>().toLevel(i) );
+		}
+
+		GameObject[] btns = GameObject.FindGameObjectsWithTag("blevel");
+
+		for(int i = 0; i < btns.Length; i++){
+			int num = i+1;
+			btns[i].GetComponent<Button>().onClick.AddListener( delegate { GetComponent<Menu>().toLevel(num); } );
+		}
+	}
 }

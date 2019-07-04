@@ -68,15 +68,22 @@ public class Menu : MonoBehaviour
     }
 
     private void loadLevel(){
-        if(GameData.loadedLevel <= 5){
+        int loadLvl = GameData.loadedLevel;
+        int maxScenes = 25;
+
+        while(loadLvl > maxScenes){
+            loadLvl -= maxScenes;
+        }
+
+        if(loadLvl <= 5){
             SceneManager.LoadScene(1);
-        } else if(GameData.loadedLevel > 5 && GameData.loadedLevel <= 10) {
+        } else if(loadLvl > 5 && loadLvl <= 10) {
             SceneManager.LoadScene(2);
-        } else if(GameData.loadedLevel > 10 && GameData.loadedLevel <= 15) {
+        } else if(loadLvl > 10 && loadLvl <= 15) {
             SceneManager.LoadScene(3);
-        } else if(GameData.loadedLevel > 15 && GameData.loadedLevel <= 20) {
+        } else if(loadLvl > 15 && loadLvl <= 20) {
             SceneManager.LoadScene(4);
-        } else if(GameData.loadedLevel > 20 && GameData.loadedLevel <= 25) {
+        } else if(loadLvl > 20 && loadLvl <= 25) {
             SceneManager.LoadScene(5);
         }
     }

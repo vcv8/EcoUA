@@ -14,11 +14,11 @@ public class FondoSelector : MonoBehaviour
         numfondos = fondos.Length;
 
         int lev = GameData.loadedLevel;
-        if(lev > numfondos){
-            while(lev > numfondos){
-                lev -= numfondos;
-            }
+        
+        while(lev > numfondos){
+            lev -= numfondos;
         }
+
         GetComponent<SpriteRenderer>().sprite = fondos[lev-1];
     }
 }
