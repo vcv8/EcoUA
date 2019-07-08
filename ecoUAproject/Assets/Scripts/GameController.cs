@@ -68,7 +68,6 @@ public class GameController : MonoBehaviour
                 }
                 
             }else if(introTime >= 2.2f){
-                //GameObject.Find("FlechasContainer").SetActive(false);
                 GetComponent<GeneradorItems>().startGenerator();
                 currentTimeLevel = 0;
                 startLevel = true;
@@ -124,7 +123,7 @@ public class GameController : MonoBehaviour
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(false); } );
 
             botonNext.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Reintentar";
-            GameObject.Find("levelFinishText").GetComponent<Text>().text = "Nivel fracasado.";
+            GameObject.Find("levelFinishText").GetComponent<Text>().text = "Fracaso.";
 
         }else if(score == maxScore){
             scoreEndImage.sprite = medallas[3];

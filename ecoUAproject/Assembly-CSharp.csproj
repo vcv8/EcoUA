@@ -53,7 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ArrowPositioning.cs" />
      <Compile Include="Assets\Scripts\AciertoFade.cs" />
+     <Compile Include="Assets\Scripts\ButtonSound.cs" />
      <Compile Include="Assets\Scripts\ColisionContenedor.cs" />
      <Compile Include="Assets\Scripts\FondoSelector.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />

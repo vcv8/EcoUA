@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Cubo : MonoBehaviour
 {	
+    public AudioClip errorSound;
+    public AudioClip correctSound;
+    private AudioSource source;
 
-    void Update()
-    {
-        
+    void Awake () {
+        source = GetComponent<AudioSource>();
     }
 
     ///COLISIONES///
@@ -18,6 +20,8 @@ public class Cubo : MonoBehaviour
         if(collision.transform.tag == transform.tag)
         {
             indicador.GetComponent<AciertoFade>().Fadeop(transform.position.x, transform.position.y, true);
+
+            source.PlayOneShot(correctSound, 0.3f);
             
             Destroy(collision.gameObject);
 
@@ -26,6 +30,8 @@ public class Cubo : MonoBehaviour
         else
         {
             indicador.GetComponent<AciertoFade>().Fadeop(transform.position.x, transform.position.y, false);
+
+            source.PlayOneShot(errorSound, 0.3f);
 
             Destroy(collision.gameObject);
 

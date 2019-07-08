@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+
 	public void Start()
     {
     	GameObject gController = GameObject.Find("GameController");
@@ -37,11 +38,11 @@ public class Menu : MonoBehaviour
     }
 
     public void nextLevel(bool next)
-    {
+    {        
         GameData gd = GameObject.Find("GameController").GetComponent<GameData>();
 
         if(next){
-            Debug.Log("Avanzmaos a nivel que sigue a " + GameData.loadedLevel);
+            //Debug.Log("Avanzmaos a nivel que sigue a " + GameData.loadedLevel);
             
             if( gd.LevelInteger >= (GameData.loadedLevel+1) ) {
     		    GameData.loadedLevel++;
@@ -55,7 +56,7 @@ public class Menu : MonoBehaviour
 
     public void restartLevel()
     {
-        Debug.Log("Avanzmaos a nivel" + GameData.loadedLevel);
+        //Debug.Log("Avanzmaos a nivel" + GameData.loadedLevel);
         loadLevel();
     }
 
