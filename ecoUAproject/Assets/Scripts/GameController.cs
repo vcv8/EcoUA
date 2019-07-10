@@ -66,6 +66,10 @@ public class GameController : MonoBehaviour
                 if(GameObject.Find("FlechasContainer") != null && GameObject.Find("FlechasContainer").activeSelf){
                     GameObject.Find("FlechasContainer").SetActive(false);
                 }
+                //Duplicado fuera de canvas
+                if(GameObject.Find("Flechas") != null && GameObject.Find("Flechas").activeSelf){
+                    GameObject.Find("Flechas").SetActive(false);
+                }
                 
             }else if(introTime >= 2.2f){
                 GetComponent<GeneradorItems>().startGenerator();

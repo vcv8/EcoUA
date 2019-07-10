@@ -14,12 +14,6 @@ public class LevelController : MonoBehaviour
         loadLevel(GameData.loadedLevel);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void loadLevel(int nivel){
     	gameController.speed_scrollDown += (0.1f * nivel);
     	gameController.maxTimeLevel += (2f * nivel);

@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\LevelList.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\MouseDrag.cs" />
+     <Compile Include="Assets\Scripts\RailScalig.cs" />
      <Compile Include="Assets\Scripts\Save.cs" />
      <Compile Include="Assets\Scripts\SaveScript.cs" />
      <Compile Include="Assets\Scripts\ScrollDown.cs" />

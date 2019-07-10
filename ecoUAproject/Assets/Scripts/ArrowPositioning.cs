@@ -9,6 +9,9 @@ public class ArrowPositioning : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(transform.position.x, railCentral.position.y, transform.position.z);
+        Transform izq = transform.GetChild(0);
+        izq.position = new Vector3(izq.position.x, railCentral.position.y, izq.position.z);
+        Transform dch = transform.GetChild(1);
+        dch.position = new Vector3(dch.position.x, railCentral.position.y, dch.position.z);
     }
 }

@@ -19,6 +19,6 @@ public class FondoSelector : MonoBehaviour
             lev -= numfondos;
         }
 
-        GetComponent<SpriteRenderer>().sprite = fondos[lev-1];
+        GetComponent<Image>().sprite = fondos[lev-1];
     }
 }
