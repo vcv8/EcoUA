@@ -14,6 +14,10 @@ public class RailScalig : MonoBehaviour {
             Debug.Log("REDUCE");
             tam.x = (dimensiones.x-0.2f)*2;
             transform.localScale = tam;
+            Vector2 limitesX = GameObject.Find("GameController").GetComponent<GameController>().limitSpawnX;
+            limitesX.x = dimensiones.x-0.2f;
+            limitesX.y = limitesX.x * (-1);
+            GameObject.Find("GameController").GetComponent<GameController>().limitSpawnX = limitesX;
         }
         
     }

@@ -19,9 +19,9 @@ public class Cubo : MonoBehaviour
 
         if(collision.transform.tag == transform.tag)
         {
-            indicador.GetComponent<AciertoFade>().Fadeop(transform.position.x, transform.position.y, true);
-
             source.PlayOneShot(correctSound, 0.3f);
+
+            indicador.GetComponent<AciertoFade>().Fadeop(transform.position.x, transform.position.y, true);
             
             Destroy(collision.gameObject);
 
@@ -29,9 +29,9 @@ public class Cubo : MonoBehaviour
         }
         else
         {
-            indicador.GetComponent<AciertoFade>().Fadeop(transform.position.x, transform.position.y, false);
-
             source.PlayOneShot(errorSound, 0.3f);
+
+            indicador.GetComponent<AciertoFade>().Fadeop(transform.position.x, transform.position.y, false);
 
             Destroy(collision.gameObject);
 
@@ -39,8 +39,7 @@ public class Cubo : MonoBehaviour
             if (GameController.instance.score < 0)
             {
                 GameController.instance.score = 0;
-            }
-            Handheld.Vibrate();            
+            }       
         }
     }
 }

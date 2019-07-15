@@ -30,6 +30,11 @@ public class GameController : MonoBehaviour
     private bool startLevel;
     public Sprite[] medallas;
 
+    //Sondio
+    public AudioClip levelComp;
+    public AudioClip levelFail;
+    private AudioSource source;
+
 
     private void Awake()
     {
@@ -43,6 +48,8 @@ public class GameController : MonoBehaviour
             Destroy(gameObject);
             Debug.LogWarning("GameController ha sido instanciado por segunda vez. Esto no debería pasar nunca pero por si acaso");
         }
+
+        source = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -96,7 +103,9 @@ public class GameController : MonoBehaviour
             }
 
             if(Input.GetKeyDown(KeyCode.Escape)){
-                SceneManager.LoadScene(0);
+                if(SceneManager.GetActiveScene().name != "Menu"){
+                    SceneManager.LoadScene(0);
+                }
             }
         }
         
@@ -127,7 +136,8 @@ public class GameController : MonoBehaviour
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(false); } );
 
             botonNext.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Reintentar";
-            GameObject.Find("levelFinishText").GetComponent<Text>().text = "Fracaso.";
+            GameObject.Find("levelFinishText").GetComponent<Text>().text = "Has fallado.";
+            source.PlayOneShot(levelFail, 0.2f);
 
         }else if(score == maxScore){
             scoreEndImage.sprite = medallas[3];
@@ -136,6 +146,7 @@ public class GameController : MonoBehaviour
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 3);
 
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
+            source.PlayOneShot(levelComp, 0.2f);
         }else if(score < ((maxScore*70)/100)){
             scoreEndImage.sprite = medallas[1];
             //scoreEndText.text = "Bronce";
@@ -143,6 +154,7 @@ public class GameController : MonoBehaviour
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 1);
 
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
+            source.PlayOneShot(levelComp, 0.2f);
         }else{
             scoreEndImage.sprite = medallas[2];
             //scoreEndText.text = "Plata";
@@ -150,6 +162,7 @@ public class GameController : MonoBehaviour
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 2);
 
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
+            source.PlayOneShot(levelComp, 0.2f);
         }
 
         //Guardar Resultados

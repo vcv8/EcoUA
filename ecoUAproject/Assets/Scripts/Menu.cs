@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
@@ -97,6 +98,10 @@ public class Menu : MonoBehaviour
 
     public void ShowMenu()
     {
-        SceneManager.LoadScene(0);
+        if( SceneManager.GetActiveScene().name == "Menu" ){
+            GameObject.Find("BotonVolver").GetComponent<Button>().onClick.Invoke();
+        } else{
+            SceneManager.LoadScene(0);
+        }
     }
 }
