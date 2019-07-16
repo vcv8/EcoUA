@@ -34,7 +34,8 @@ public class GameController : MonoBehaviour
     public AudioClip levelComp;
     public AudioClip levelFail;
     private AudioSource source;
-
+    private AudioSource finSource;
+    private bool faded;
 
     private void Awake()
     {
@@ -60,6 +61,7 @@ public class GameController : MonoBehaviour
         maxScore = 0;
         introTime = 0;
         GameObject.FindWithTag("IntroLevel").GetComponent<Text>().text = "Nivel " + GameData.loadedLevel;
+        finSource = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
     }
 
     // Update is called once per frame
@@ -79,6 +81,9 @@ public class GameController : MonoBehaviour
                 }
                 
             }else if(introTime >= 2.2f){
+                // Comienza musica
+                source.Play(0);
+
                 GetComponent<GeneradorItems>().startGenerator();
                 currentTimeLevel = 0;
                 startLevel = true;
@@ -106,6 +111,13 @@ public class GameController : MonoBehaviour
                 if(SceneManager.GetActiveScene().name != "Menu"){
                     SceneManager.LoadScene(0);
                 }
+            }
+        }
+
+        if(currentTimeLevel >= maxTimeLevel){
+            if(!faded){
+                faded = true;
+                StartCoroutine(FadeOut(0.002f));
             }
         }
         
@@ -137,7 +149,7 @@ public class GameController : MonoBehaviour
 
             botonNext.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Reintentar";
             GameObject.Find("levelFinishText").GetComponent<Text>().text = "Has fallado.";
-            source.PlayOneShot(levelFail, 0.2f);
+            finSource.PlayOneShot(levelFail, 0.2f);
 
         }else if(score == maxScore){
             scoreEndImage.sprite = medallas[3];
@@ -146,7 +158,7 @@ public class GameController : MonoBehaviour
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 3);
 
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
-            source.PlayOneShot(levelComp, 0.2f);
+            finSource.PlayOneShot(levelComp, 0.2f);
         }else if(score < ((maxScore*70)/100)){
             scoreEndImage.sprite = medallas[1];
             //scoreEndText.text = "Bronce";
@@ -154,7 +166,7 @@ public class GameController : MonoBehaviour
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 1);
 
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
-            source.PlayOneShot(levelComp, 0.2f);
+            finSource.PlayOneShot(levelComp, 0.2f);
         }else{
             scoreEndImage.sprite = medallas[2];
             //scoreEndText.text = "Plata";
@@ -162,7 +174,7 @@ public class GameController : MonoBehaviour
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 2);
 
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
-            source.PlayOneShot(levelComp, 0.2f);
+            finSource.PlayOneShot(levelComp, 0.2f);
         }
 
         //Guardar Resultados
@@ -171,4 +183,21 @@ public class GameController : MonoBehaviour
         scoreEndImage.gameObject.SetActive(true);
         botonesFinal.SetActive(true);
     }
+
+
+    // CORUTINA DE SONIDO
+
+    private IEnumerator FadeOut(float speed){
+
+        float audioVolume = source.volume;
+
+        while(source.volume >= 0){
+            audioVolume -= speed;
+            source.volume = audioVolume;
+            yield return new WaitForSeconds (0.1f);
+        }
+        
+        source.Stop();
+    }
+
 }
