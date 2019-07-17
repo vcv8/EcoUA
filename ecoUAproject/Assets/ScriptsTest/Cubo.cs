@@ -29,7 +29,7 @@ public class Cubo : MonoBehaviour
         }
         else
         {
-            source.PlayOneShot(errorSound, 0.3f);
+            source.PlayOneShot(errorSound, 0.4f);
 
             indicador.GetComponent<AciertoFade>().Fadeop(transform.position.x, transform.position.y, false);
 

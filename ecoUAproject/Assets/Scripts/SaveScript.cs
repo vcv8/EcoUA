@@ -17,7 +17,8 @@ public class SaveScript : MonoBehaviour {
         var save = new Save()
         {
             SavedLevel = gameData.LevelInteger,
-            SavedScores = gameData.ScoreIntegers
+            SavedScores = gameData.ScoreIntegers,
+            SavedLang = GameData.idioma
         };
 
         var binaryFormatter = new BinaryFormatter();
@@ -49,10 +50,14 @@ public class SaveScript : MonoBehaviour {
             }else{
                 gameData.ScoreIntegers = save.SavedScores;
             }
+            
             gameData.LevelInteger = save.SavedLevel;
+            GameData.idioma = save.SavedLang;
+
             gameData.ShowData();
- 
+    
             Debug.Log("Data Loaded");
+            Debug.Log("Idioma " + GameData.idioma);
         }
         else
         {
