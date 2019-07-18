@@ -7000,6 +7000,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1231661952}
+  - component: {fileID: 1231661953}
   m_Layer: 5
   m_Name: InfoPanel
   m_TagString: Untagged
@@ -7029,6 +7030,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1231661953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231661951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cceaf071507c5498073ba6f0feb30c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contentSize: 5
 --- !u!1 &1314249112
 GameObject:
   m_ObjectHideFlags: 0
@@ -7362,7 +7376,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.065000005, y: 0.014895811}
   m_AnchorMax: {x: 0.9362501, y: 0.13000001}
-  m_AnchoredPosition: {x: -0.5, y: 1.3499756}
+  m_AnchoredPosition: {x: -0.5, y: 1.3498535}
   m_SizeDelta: {x: 0.2000122, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1399624972
@@ -8315,7 +8329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.065000005, y: 0.8686459}
   m_AnchorMax: {x: 0.9362501, y: 1}
-  m_AnchoredPosition: {x: -0.5, y: 0.6000366}
+  m_AnchoredPosition: {x: -0.5, y: 0.5999756}
   m_SizeDelta: {x: 197.59998, y: 0.9000244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1570948952
@@ -10961,7 +10975,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.000061035156}
-  m_SizeDelta: {x: 0, y: 123.02222}
+  m_SizeDelta: {x: 0, y: -28.599243}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1994767819
 MonoBehaviour:
@@ -11263,7 +11277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.065000005, y: 0.13000001}
   m_AnchorMax: {x: 0.9362501, y: 0.8686459}
-  m_AnchoredPosition: {x: -0.5, y: 1.000061}
+  m_AnchoredPosition: {x: -0.5, y: 1.0001221}
   m_SizeDelta: {x: 0.19999981, y: -1.1199951}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2052238215
@@ -11789,7 +11803,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLevel: {fileID: 2063746623}
-  textScore: {fileID: 1460030289}
 --- !u!114 &2114583816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12227,6 +12240,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: "Envases de pl\xE1stico, latas y bricks."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6445778626165851414, guid: c176b544af340ef43bdfc1ef1b8a77a2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 375.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6445778626165851414, guid: c176b544af340ef43bdfc1ef1b8a77a2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c176b544af340ef43bdfc1ef1b8a77a2, type: 3}

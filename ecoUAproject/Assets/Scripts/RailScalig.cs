@@ -10,7 +10,7 @@ public class RailScalig : MonoBehaviour {
         Debug.Log("tam X: " + tam.x);
 
         //Adapta ancho de rail
-        if(tam.x/2 > dimensiones.x){
+        if((tam.x/2)+0.2 > dimensiones.x){
             Debug.Log("REDUCE");
             tam.x = (dimensiones.x-0.2f)*2;
             transform.localScale = tam;

@@ -9,10 +9,10 @@ public class LevelList : MonoBehaviour
 	private	GameObject[] medallas;
 	private GameData gameData;
 
+	private bool started = false;
+
 	public Sprite[] medSprites;
 
-
-    // Start is called before the first frame update
     void Start()
     {
 		creaBotones();
@@ -23,7 +23,15 @@ public class LevelList : MonoBehaviour
 
         rellenaMedallas();
         destapaBotones();
+
+		started = true;
     }
+
+	private void OnEnable() {
+		if(started){
+			updateBotones();
+		}
+	}
 
     public void rellenaMedallas(){
     	int[] scores = gameData.ScoreIntegers;
@@ -58,14 +66,30 @@ public class LevelList : MonoBehaviour
     }
 
 	private void creaBotones(){
+
+		if( GameData.idioma ){
+			transform.parent.parent.parent.GetComponentInChildren<Text>().text = "Selecciona Nivell";
+		}else{
+			transform.parent.parent.parent.GetComponentInChildren<Text>().text = "Selecciona Nivel";
+		}
+
 		int numLevels = GameData.totalLevels - 1;
 		GameObject boton = transform.GetChild(0).gameObject;
+
+		if( GameData.idioma ){
+			boton.GetComponentInChildren<Text>().text = "Nivell 1";
+		}else{
+			boton.GetComponentInChildren<Text>().text = "Nivel 1";
+		}
 
 		for(int i = 2; i <= numLevels; i++){
 			GameObject iBoton = (GameObject)Instantiate(boton, transform);
 			
-			iBoton.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Nivel " + i;
-			//iBoton.GetComponent<Button>().onClick.AddListener( () => GetComponent<Menu>().toLevel(i) );
+			if( GameData.idioma ){
+				iBoton.GetComponentInChildren<Text>().text = "Nivell " + i;	
+			}else{
+				iBoton.GetComponentInChildren<Text>().text = "Nivel " + i;
+			}
 		}
 
 		GameObject[] btns = GameObject.FindGameObjectsWithTag("blevel");
@@ -73,6 +97,34 @@ public class LevelList : MonoBehaviour
 		for(int i = 0; i < btns.Length; i++){
 			int num = i+1;
 			btns[i].GetComponent<Button>().onClick.AddListener( delegate { GetComponent<Menu>().toLevel(num); } );
+		}
+	}
+
+	private void updateBotones(){
+		
+		if( GameData.idioma ){
+			transform.parent.parent.parent.GetComponentInChildren<Text>().text = "Selecciona Nivell";
+		}else{
+			transform.parent.parent.parent.GetComponentInChildren<Text>().text = "Selecciona Nivel";
+		}
+
+		int numLevels = GameData.totalLevels - 1;
+		GameObject boton = transform.GetChild(0).gameObject;
+
+		if( GameData.idioma ){
+			boton.GetComponentInChildren<Text>().text = "Nivell 1";
+		}else{
+			boton.GetComponentInChildren<Text>().text = "Nivel 1";
+		}
+
+		for(int i = 2; i <= numLevels; i++){
+			GameObject iBoton = transform.GetChild(i -1).gameObject;
+			
+			if( GameData.idioma ){
+				iBoton.GetComponentInChildren<Text>().text = "Nivell " + i;	
+			}else{
+				iBoton.GetComponentInChildren<Text>().text = "Nivel " + i;
+			}
 		}
 	}
 }

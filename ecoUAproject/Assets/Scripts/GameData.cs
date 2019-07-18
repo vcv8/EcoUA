@@ -11,8 +11,8 @@ public class GameData : MonoBehaviour {
 
     [SerializeField]
     private Text textLevel;
-    [SerializeField]
-    private Text textScore;
+    //[SerializeField]
+    //private Text textScore;
 
     private void Start() {
         ScoreIntegers = new int[totalLevels];    
@@ -32,9 +32,10 @@ public class GameData : MonoBehaviour {
 
     public void ShowData()
     {
+        //METODO DESFASADO
         if( SceneManager.GetActiveScene().name == "Menu" ) {
-            textLevel.text = "Nivel " + LevelInteger.ToString();
-            textScore.text = ScoreIntegers[LevelInteger].ToString();
+            //textLevel.text = "Nivel " + LevelInteger.ToString();
+            //textScore.text = ScoreIntegers[LevelInteger].ToString();
         }else{
             Debug.Log("No place to show data.");
         }
