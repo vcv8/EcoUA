@@ -69,8 +69,10 @@ public class LevelList : MonoBehaviour
 
 		if( GameData.idioma ){
 			transform.parent.parent.parent.GetComponentInChildren<Text>().text = "Selecciona Nivell";
+			transform.parent.parent.parent.GetChild(2).GetComponentInChildren<Text>().text = "Tornar";
 		}else{
 			transform.parent.parent.parent.GetComponentInChildren<Text>().text = "Selecciona Nivel";
+			transform.parent.parent.parent.GetChild(2).GetComponentInChildren<Text>().text = "Volver";
 		}
 
 		int numLevels = GameData.totalLevels - 1;
@@ -104,8 +106,10 @@ public class LevelList : MonoBehaviour
 		
 		if( GameData.idioma ){
 			transform.parent.parent.parent.GetComponentInChildren<Text>().text = "Selecciona Nivell";
+			transform.parent.parent.parent.GetChild(2).GetComponentInChildren<Text>().text = "Tornar";
 		}else{
 			transform.parent.parent.parent.GetComponentInChildren<Text>().text = "Selecciona Nivel";
+			transform.parent.parent.parent.GetChild(2).GetComponentInChildren<Text>().text = "Volver";
 		}
 
 		int numLevels = GameData.totalLevels - 1;

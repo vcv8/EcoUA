@@ -29,6 +29,7 @@ public class GameController : MonoBehaviour
     float introTime;
     private bool startLevel;
     public Sprite[] medallas;
+    private bool completado;
 
     //Sondio
     public AudioClip levelComp;
@@ -133,7 +134,7 @@ public class GameController : MonoBehaviour
 
     private void levelEnd()
     {
-        //Cargamos resultados anteriores
+        // Cargamos resultados anteriores
         GetComponent<SaveScript>().LoadData();
 
         levelFinishText.gameObject.SetActive(true);
@@ -145,8 +146,8 @@ public class GameController : MonoBehaviour
 
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(false); } );
 
-            botonNext.transform.GetChild(0).gameObject.GetComponent<Text>().text = "Reintentar";
-            GameObject.Find("levelFinishText").GetComponent<Text>().text = "Has fallado.";
+            completado = false;
+    
             finSource.PlayOneShot(levelFail, 0.2f);
 
         }else if(score == maxScore){
@@ -154,26 +155,32 @@ public class GameController : MonoBehaviour
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 3);
 
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
+            completado = true;
             finSource.PlayOneShot(levelComp, 0.2f);
         }else if(score < ((maxScore*70)/100)){
             scoreEndImage.sprite = medallas[1];
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 1);
 
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
+            completado = true;
             finSource.PlayOneShot(levelComp, 0.2f);
         }else{
             scoreEndImage.sprite = medallas[2];
             GetComponent<GameData>().CreateData(GameData.loadedLevel, 2);
 
             botonNext.GetComponent<Button>().onClick.AddListener( delegate{ GameObject.Find("BotonesMenu").GetComponent<Menu>().nextLevel(true); } );
+            completado = true;
             finSource.PlayOneShot(levelComp, 0.2f);
         }
 
-        //Guardar Resultados
+        // Guardar Resultados
         GetComponent<SaveScript>().SaveData();
 
         scoreEndImage.gameObject.SetActive(true);
         botonesFinal.SetActive(true);
+
+        // Traduce textos de resultado
+        GetComponent<TraduceNivel>().traduceContenido(completado);
     }
 
 

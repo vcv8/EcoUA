@@ -72,7 +72,10 @@
      <Compile Include="Assets\Scripts\SaveScript.cs" />
      <Compile Include="Assets\Scripts\ScrollDown.cs" />
      <Compile Include="Assets\Scripts\TouchControl.cs" />
+     <Compile Include="Assets\Scripts\TraduceBasuras.cs" />
      <Compile Include="Assets\Scripts\TraduceContenedores.cs" />
+     <Compile Include="Assets\Scripts\TraduceCreditos.cs" />
+     <Compile Include="Assets\Scripts\TraduceNivel.cs" />
      <Compile Include="Assets\ScriptsTest\BasuraGen.cs" />
      <Compile Include="Assets\ScriptsTest\Cubo.cs" />
      <Compile Include="Assets\ScriptsTest\ElemBasura.cs" />
