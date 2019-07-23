@@ -1591,6 +1591,7 @@ GameObject:
   - component: {fileID: 1401917485}
   - component: {fileID: 1401917486}
   - component: {fileID: 1401917487}
+  - component: {fileID: 1401917488}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1672,7 +1673,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLevel: {fileID: 0}
-  textScore: {fileID: 0}
 --- !u!114 &1401917485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1793,6 +1793,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1401917488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401917480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 084096739e060e443be59f736ce047f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1405327782
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,7 +2216,7 @@ Transform:
   m_GameObject: {fileID: 1980291909}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.17, y: 3.7, z: 0}
-  m_LocalScale: {x: 0.09988766, y: 0.09988766, z: 0.09988766}
+  m_LocalScale: {x: 0.14, y: 0.14, z: 0.14}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10

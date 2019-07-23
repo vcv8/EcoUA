@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 498}
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
-  controlID: 12335
+  controlID: 2811
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 498}
   m_MaxSize: {x: 14006, y: 14048}
   vertical: 1
-  controlID: 12422
+  controlID: 2752
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 224}
   m_MaxSize: {x: 12010, y: 4024}
   vertical: 0
-  controlID: 12423
+  controlID: 2753
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_MinSize: {x: 336, y: 274}
   m_MaxSize: {x: 14006, y: 10024}
   vertical: 0
-  controlID: 12389
+  controlID: 2836
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -422,7 +422,7 @@ MonoBehaviour:
       width: 1322.4645
       height: 1920
     m_MinimalGUI: 1
-  m_defaultScale: 0.3296875
+  m_defaultScale: 0.42578125
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 436, y: 650}
@@ -462,9 +462,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 90}
+    m_Target: {x: -12.177422, y: 5.9885006, z: -0.24824455}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 90}
+    m_Value: {x: -12.177422, y: 5.9885006, z: -0.24824455}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -496,9 +496,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.224882
+    m_Target: 36.052044
     speed: 2
-    m_Value: 10.224882
+    m_Value: 36.052044
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 52230
+  m_LastSelectedObjectID: 61574
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -658,9 +658,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: fa010000
+      m_SelectedIDs: 802a0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 8a67ffff9e67ffff4c69ffff8e69ffffd069ffff126affff666affff6e6affff5c93ffff509fffff12acffff30acffffaccaffff9cdbffffccf9ffff68faffff04fbffff6cfbffffd6fbfffffc2b00000e2c0000662c00008c2c0000a42c0000b62c0000d22c0000ee2c00004a2d0000602d00008c2d0000902d0000d82d0000422e00008a2e00006acb0000a0cb00002ae40000
+      m_ExpandedIDs: ae8bffffc691ffff4e94ffffee95ffff2899ffff409cffff7ea2ffff54aaffffd6aaffff68abffff28acffffe8acffff82adffff7abaffff4abeffff24bfffff6ec5ffffbad3ffffccdeffff62dffffff6dfffffa8e0ffff6ee1fffff0e1ffffbafbffff642e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -748,20 +748,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Sonido
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Sonido
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Usuario\Documents\EcoUA\EcoUA\ecoUAproject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 72}
-    m_SelectedIDs: 76270000
-    m_LastClickedID: 10102
-    m_ExpandedIDs: 0000000076270000e2280000502f000000ca9a3b
+    scrollPos: {x: 0, y: 132}
+    m_SelectedIDs: da280000
+    m_LastClickedID: 10458
+    m_ExpandedIDs: 000000007e270000ea2800007a2f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -789,7 +789,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000076270000e2280000502f000000ca9a3b
+    m_ExpandedIDs: 000000007e270000ea2800007a2f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -841,7 +841,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 80}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 126
 --- !u!114 &23
