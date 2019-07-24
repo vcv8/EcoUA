@@ -34,6 +34,7 @@ public class GameController : MonoBehaviour
     //Sondio
     public AudioClip levelComp;
     public AudioClip levelFail;
+    public AudioClip[] song;
     private AudioSource source;
     private AudioSource finSource;
     private bool faded;
@@ -52,6 +53,14 @@ public class GameController : MonoBehaviour
         }
 
         source = GetComponent<AudioSource>();
+
+        int numsongs = song.Length;
+        int lev = GameData.loadedLevel;
+        while( lev > numsongs ){
+            lev -= numsongs;
+        }
+
+        source.clip = song[lev-1];
     }
 
     // Start is called before the first frame update

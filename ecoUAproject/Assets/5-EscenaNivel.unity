@@ -1777,6 +1777,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 79a0d5e535ae03a4ba18db3eb2f0a507, type: 3}
   levelComp: {fileID: 8300000, guid: 36499a17ea47531449d65730f3853fb9, type: 3}
   levelFail: {fileID: 8300000, guid: b6a7b9534f22d0b43bd02ae2d7908079, type: 3}
+  song:
+  - {fileID: 8300000, guid: a4dcef6cccd1afb48b82bdce4a98d3b8, type: 3}
+  - {fileID: 8300000, guid: 5fcceec5083955241aaa4a580d59d27d, type: 3}
+  - {fileID: 8300000, guid: 80d5e3de73f049744acb818e53938b9c, type: 3}
 --- !u!4 &1401917482
 Transform:
   m_ObjectHideFlags: 0

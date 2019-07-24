@@ -12037,8 +12037,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2114583818}
-  - component: {fileID: 2114583817}
-  - component: {fileID: 2114583816}
   - component: {fileID: 2114583815}
   - component: {fileID: 2114583819}
   - component: {fileID: 2114583822}
@@ -12064,49 +12062,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLevel: {fileID: 2063746623}
---- !u!114 &2114583816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114583814}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0353b6fe589532747b5e461d0b8f0738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allBasuraItems:
-  - {fileID: 5747578328659981889, guid: 1d972cc771a8da246b38dc9dc7d6c9ee, type: 3}
-  - {fileID: 4059142989744877938, guid: 7444fab83d8c4b546b78e77686569d86, type: 3}
-  - {fileID: 7661217307295430525, guid: 60101ebf17d7ab9479d89938dd419640, type: 3}
-  spawnRate: 2
---- !u!114 &2114583817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114583814}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8b3f2420c6d2be4f92fa1fe48e4165a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed_scrollDown: 1.5
-  limitSpawnX: {x: -2.45, y: 2.45}
-  score: 0
-  maxScore: 0
-  scoreText: {fileID: 0}
-  levelFinishText: {fileID: 0}
-  scoreEndImage: {fileID: 0}
-  botonesFinal: {fileID: 0}
-  finishLevel: 0
-  finishGen: 0
-  maxTimeLevel: 30
-  medallas: []
-  levelComp: {fileID: 0}
-  levelFail: {fileID: 0}
 --- !u!4 &2114583818
 Transform:
   m_ObjectHideFlags: 0
