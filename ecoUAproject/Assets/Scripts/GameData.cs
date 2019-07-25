@@ -15,7 +15,7 @@ public class GameData : MonoBehaviour {
     //private Text textScore;
 
     private void Start() {
-        ScoreIntegers = new int[totalLevels];    
+        UpdateData();
     }
 
     public void CreateData(int level, int score)
@@ -39,5 +39,9 @@ public class GameData : MonoBehaviour {
         }else{
             Debug.Log("No place to show data.");
         }
+    }
+
+    public void UpdateData(){
+        ScoreIntegers = new int[totalLevels]; 
     }
 }
