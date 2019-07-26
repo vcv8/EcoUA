@@ -16,7 +16,7 @@ public class LevelController : MonoBehaviour
     }
 
     public void loadLevel(int nivel){
-    	gameController.speed_scrollDown += (0.1f * nivel);
+    	gameController.speed_scrollDown += (0.08f * nivel);
         gameController.maxTimeLevel += (2f * nivel);
         
         if( gameController.maxTimeLevel > 45 ){
@@ -24,6 +24,6 @@ public class LevelController : MonoBehaviour
             gameController.maxTimeLevel = 45;
         }
         
-        generadorItems.spawnRate -= (0.015f * nivel);
+        generadorItems.spawnRate -= (0.016f * nivel);
     }
 }

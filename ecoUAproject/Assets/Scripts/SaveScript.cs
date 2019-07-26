@@ -14,6 +14,16 @@ public class SaveScript : MonoBehaviour {
 
     public void SaveData()
     {
+        if(GameData.totalLevels > gameData.ScoreIntegers.Length){
+            int[] aux = new int[GameData.totalLevels];
+
+            for(int i = 0; i<gameData.ScoreIntegers.Length; i++){
+                aux[i] = gameData.ScoreIntegers[i];
+            }
+
+            gameData.ScoreIntegers = aux;
+        }
+
         var save = new Save()
         {
             SavedLevel = gameData.LevelInteger,
@@ -55,6 +65,7 @@ public class SaveScript : MonoBehaviour {
             gameData.LevelInteger = save.SavedLevel;
             GameData.idioma = save.SavedLang;
             GameData.musica = save.SavedMusic;
+            GameData.totalLevels = save.SavedScores.Length;
 
             gameData.ShowData();
     
@@ -64,6 +75,7 @@ public class SaveScript : MonoBehaviour {
         else
         {
             Debug.LogWarning("Save file doesn't exist.");
+            gameData.ScoreIntegers = new int[GameData.totalLevels];
             gameData.CreateData(0, 0);
             SaveData();
         }

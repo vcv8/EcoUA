@@ -145,14 +145,19 @@ public class GameController : MonoBehaviour
 
     private void levelEnd()
     {
+        // Cargamos resultados anteriores
+        GetComponent<SaveScript>().LoadData();
+
+        Debug.Log("loadedlevel " + GameData.loadedLevel);
+        Debug.Log("totallevels " + GameData.totalLevels);
         // Crea nuevo nivel si estabamos en el ultimo
         if( GameData.loadedLevel == (GameData.totalLevels-1) ){
             GameData.totalLevels ++;
-            GetComponent<GameData>().UpdateData();
+            //GetComponent<GameData>().UpdateData();
         }
 
-        // Cargamos resultados anteriores
-        GetComponent<SaveScript>().LoadData();
+        Debug.Log("loadedlevel " + GameData.loadedLevel);
+        Debug.Log("totallevels " + GameData.totalLevels);
 
         levelFinishText.gameObject.SetActive(true);
 
