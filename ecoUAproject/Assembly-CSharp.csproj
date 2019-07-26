@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\MouseDrag.cs" />
      <Compile Include="Assets\Scripts\MusicaMenu.cs" />
+     <Compile Include="Assets\Scripts\MusicaMute.cs" />
      <Compile Include="Assets\Scripts\RailScalig.cs" />
      <Compile Include="Assets\Scripts\Save.cs" />
      <Compile Include="Assets\Scripts\SaveScript.cs" />

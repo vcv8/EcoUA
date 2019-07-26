@@ -70,7 +70,7 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 b31ef1c110c5a7ed74ad67be3ae59038 Unity.TextMeshPro.dll:TMPro.TMP_InputField
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.MusicaMenu
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.LevelController
-46d233b4ad3db399b63c306af255284d Assembly-CSharp.dll:.GameController
+f05bade8590def1b35a66e734a31c32e Assembly-CSharp.dll:.GameController
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 5fc094978ce3e3591a7500ed380d854a UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -118,6 +118,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TraduceNivel
 8792e8356998aff9da84718837517b33 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Blur
 af78f221a76b31179241c75f785d3894 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.MotionBlur
 00274a21279f5cb831ce20f895049e38 Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
@@ -146,6 +147,7 @@ ea4867acc252715cd4638b1ecf2f905c Assembly-CSharp.dll:.GameData
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 122d7ffab68b4eedc72a1fce03e63c2f Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.BloomOptimized
 7b00f9eb8839d962cd29f91ee0a7e80f Assembly-CSharp.dll:.ElemBasura
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TraduceCreditos
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ColisionContenedor
 b8a5e8091ab0b8861d2add371082c5e0 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 427fcfe7d0fff43814f5e679e8168811 Assembly-CSharp.dll:.LevelList
@@ -203,6 +205,7 @@ f080a86a4a939dd08c0cc4f4f05e1e4e Assembly-CSharp-firstpass.dll:UnityStandardAsse
 3bd301965190e77c3822602bd15d95bb Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Vortex
 c5bbb5c4b020d95f6395b3448c0eddcc Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.CameraMotionBlur
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+9518eed2443b00fe7b76da6c6d663556 Assembly-CSharp.dll:.TraduceBasuras
 ad8101d8c2e7f66814eca921966abfc9 Assembly-CSharp.dll:.ButtonSound
 53034d23cbe603cdc637733eb7d72ff6 Assembly-CSharp.dll:.FondoSelector
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
@@ -219,6 +222,4 @@ c8533c9804499b27f7c31b277d275f91 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 10d40c4c007ed0fe1a397ef11ee530fa Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ColorCorrectionLookup
 83dffc789cd416ac4ef1fc44f3423e35 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Tonemapping
-9518eed2443b00fe7b76da6c6d663556 Assembly-CSharp.dll:.TraduceBasuras
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TraduceCreditos
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TraduceNivel
+d8086569af17d0f8a6083dff91202d1b Assembly-CSharp.dll:.MusicaMute

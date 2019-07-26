@@ -39,11 +39,6 @@ public class LangController : MonoBehaviour
                 GameObject.Find("BotonNiveles").GetComponentInChildren<Text>().text = "Lista de Niveles";
                 GameObject.Find("Level").GetComponent<Text>().text = "Nivel " + GetComponent<GameData>().LevelInteger;
             }
-
-
-        //Traduccion Niveles
-        }else{
-
         }
     }
 }

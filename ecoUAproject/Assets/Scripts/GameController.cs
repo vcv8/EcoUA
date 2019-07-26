@@ -92,7 +92,9 @@ public class GameController : MonoBehaviour
                 
             }else if(introTime >= 2.2f){
                 // Comienza musica
-                source.Play(0);
+                if(GameData.musica){
+                    source.Play(0);
+                }
 
                 GetComponent<GeneradorItems>().startGenerator();
                 currentTimeLevel = 0;

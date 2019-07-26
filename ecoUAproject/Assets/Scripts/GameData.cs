@@ -8,6 +8,7 @@ public class GameData : MonoBehaviour {
     public static int totalLevels = 31; // Numero total de niveles jugables + 1
     public static int loadedLevel = 0;  // Nivel que va a cargarse en la escena de nivel
     public static bool idioma = false;      // Idioma de textos del juego. 0:Castellano 1:Valenciano
+    public static bool musica = true;   // True: Se reproduce musica. False: No se reproduce musica.
 
     [SerializeField]
     private Text textLevel;

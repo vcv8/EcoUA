@@ -18,7 +18,8 @@ public class SaveScript : MonoBehaviour {
         {
             SavedLevel = gameData.LevelInteger,
             SavedScores = gameData.ScoreIntegers,
-            SavedLang = GameData.idioma
+            SavedLang = GameData.idioma,
+            SavedMusic = GameData.musica
         };
 
         var binaryFormatter = new BinaryFormatter();
@@ -53,6 +54,7 @@ public class SaveScript : MonoBehaviour {
             
             gameData.LevelInteger = save.SavedLevel;
             GameData.idioma = save.SavedLang;
+            GameData.musica = save.SavedMusic;
 
             gameData.ShowData();
     
