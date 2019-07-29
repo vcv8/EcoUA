@@ -153,7 +153,6 @@ public class GameController : MonoBehaviour
         // Crea nuevo nivel si estabamos en el ultimo
         if( GameData.loadedLevel == (GameData.totalLevels-1) ){
             GameData.totalLevels ++;
-            //GetComponent<GameData>().UpdateData();
         }
 
         Debug.Log("loadedlevel " + GameData.loadedLevel);

@@ -24,6 +24,6 @@ public class LevelController : MonoBehaviour
             gameController.maxTimeLevel = 45;
         }
         
-        generadorItems.spawnRate -= (0.016f * nivel);
+        generadorItems.spawnRate -= (0.06f * nivel);
     }
 }

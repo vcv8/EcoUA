@@ -1737,7 +1737,7 @@ MonoBehaviour:
   - {fileID: 5747578328659981889, guid: 1d972cc771a8da246b38dc9dc7d6c9ee, type: 3}
   - {fileID: 3664337254791735982, guid: 80c4d8e6ea0ba9943930bf7c61fb096c, type: 3}
   - {fileID: 3898035482177335310, guid: bebeabd3e52194d4dbcde7023f1a6ede, type: 3}
-  spawnRate: 2
+  spawnRate: 3
 --- !u!114 &1401917484
 MonoBehaviour:
   m_ObjectHideFlags: 0

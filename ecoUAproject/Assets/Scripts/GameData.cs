@@ -22,9 +22,7 @@ public class GameData : MonoBehaviour {
     public void CreateData(int level, int score)
     {
         if(level+1 > LevelInteger){
-            if(level+1 < ScoreIntegers.Length){
-                LevelInteger = level+1;
-            }
+            LevelInteger = level+1;
         }
         if(score > ScoreIntegers[level]){
             ScoreIntegers[level] = score;

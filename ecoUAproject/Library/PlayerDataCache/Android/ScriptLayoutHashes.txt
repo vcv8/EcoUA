@@ -207,6 +207,7 @@ c5bbb5c4b020d95f6395b3448c0eddcc Assembly-CSharp-firstpass.dll:UnityStandardAsse
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 9518eed2443b00fe7b76da6c6d663556 Assembly-CSharp.dll:.TraduceBasuras
 ad8101d8c2e7f66814eca921966abfc9 Assembly-CSharp.dll:.ButtonSound
+d8086569af17d0f8a6083dff91202d1b Assembly-CSharp.dll:.MusicaMute
 53034d23cbe603cdc637733eb7d72ff6 Assembly-CSharp.dll:.FondoSelector
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 03baf96f6342c10a33eb5955d1911950 Assembly-CSharp.dll:.ArrowPositioning
@@ -222,4 +223,3 @@ c8533c9804499b27f7c31b277d275f91 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 10d40c4c007ed0fe1a397ef11ee530fa Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ColorCorrectionLookup
 83dffc789cd416ac4ef1fc44f3423e35 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Tonemapping
-d8086569af17d0f8a6083dff91202d1b Assembly-CSharp.dll:.MusicaMute
