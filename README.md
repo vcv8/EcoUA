@@ -1,5 +1,5 @@
 # EcoUA
-Juego de Reciclaje para plataformas móviles.
+Juego de Reciclaje para plataformas móviles realizado en colaboración con la [Universidad de Alicante](https://www.ua.es/).
 
 ## Vista Previa
 
